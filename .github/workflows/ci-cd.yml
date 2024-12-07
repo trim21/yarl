@@ -87,7 +87,7 @@ jobs:
     - name: Build sdists and pure-python wheel
       env:
         PIP_CONSTRAINT: requirements/cython.txt
-      run: python -Im build --config-setting=pure-python=true
+      run: python -Im build --config-setting=setup-args=-Dpure-python=enabled
     - name: Determine actual created filenames
       id: dist-filenames-detection
       run: >-
